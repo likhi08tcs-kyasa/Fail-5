@@ -1,7 +1,9 @@
 def calculate_total(prices, tax_rate):
     total = sum(prices)
-    return total + totl * tax_rate  # typo: totl -> NameError
+    return total + total * tax_rate
 
 
 def average(values):
-    return sum(values) / len(values)  # ZeroDivisionError on []
+    if not values:
+        return 0
+    return sum(values) / len(values)
